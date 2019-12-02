@@ -37,8 +37,15 @@ function selectOption(option) {
     return startGame()
   }
   inventory = Object.assign(inventory, option.setInventory)
+  if (option.removeInventory){
+    deleteItem(option.removeInventory)
+  }
   inventoryElement.innerText = 'Inventory: ' + JSON.stringify(inventory)
   showTextNode(nextTextNodeId)
+}
+
+function deleteItem(prop){
+  delete inventory[prop]
 }
 
 const textNodes = [
@@ -63,6 +70,7 @@ const textNodes = [
     options: [{
       text: 'Get a sword',
       setInventory: {sword: true},
+      removeInventory: 'blueGoo',
       nextText: 1///Change
     },
     {
