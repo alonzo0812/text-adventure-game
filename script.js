@@ -11,7 +11,7 @@ function startGame() {
   playerHealth = 100//Math.floor((Math.random()*20 + 100))
   showTextNode(1)
 }
-
+//////////////////////////////////////////////
 function typeWriter(textNode,x) {
     if (x < textNode.length){//try while?
       console.log(textNode)
@@ -20,15 +20,14 @@ function typeWriter(textNode,x) {
       setTimeout(function(){typeWriter(textNode,x);}, 60)
     }
   };
+  ////////////////////////////////////////////
 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-  ////////typewriter////////////////////////////
+  ////////////////////////////////////
   var x = 0;
   textElement.innerText = '';
   typeWriter(textNode.text,x)
-  console.log('End')
-  
   ////////////////////////////////////////////////
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
@@ -193,11 +192,11 @@ chattering in a distance.
 ??: "Pitiful lad.. I hope he not hear the voice of angels too soon"
 ???: "Bah! Serves him right! He's a knight of no welcome to any side of Destice"`,
     options: [{
-      text: 'Continue',
+      text: 'Proceed to talk to the King',
       nextText: 8
     },
     {
-      text: `Continue`,
+      text: `Kill the solder who disrespected you`,
       nextText: 8
     },
     ]
