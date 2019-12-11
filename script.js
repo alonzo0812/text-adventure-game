@@ -12,9 +12,24 @@ function startGame() {
   showTextNode(1)
 }
 
+function typeWriter(textNode,x) {
+    if (x < textNode.length){//try while?
+      console.log(textNode)
+      textElement.innerHTML += textNode.charAt(x);
+      x++;
+      setTimeout(function(){typeWriter(textNode,x);}, 60)
+    }
+  };
+
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-  textElement.innerText = textNode.text
+  ////////typewriter////////////////////////////
+  var x = 0;
+  textElement.innerText = '';
+  typeWriter(textNode.text,x)
+  console.log('End')
+  
+  ////////////////////////////////////////////////
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
   }
@@ -116,6 +131,71 @@ Surprisingly, there is. And that is you, the mighty knight that balances the opp
     },
     ]
   },
+  {
+    id: 3,
+    text: ``,
+    options: [{
+      text: 'Continue',
+      nextText: 7
+    },
+    {
+      text: `Continue`,
+      nextText: 7
+    },
+    ]
+  },
+  {
+    id: 4,
+    text: ``,
+    options: [{
+      text: 'Continue',
+      nextText: 7
+    },
+    {
+      text: `Continue`,
+      nextText: 7
+    },
+    ]
+  },
+  {
+    id: 5,
+    text: ``,
+    options: [{
+      text: 'Continue',
+      nextText: 7
+    },
+    {
+      text: `Continue`,
+      nextText: 7
+    },
+    ]
+  },
+  {
+    id: 6,
+    text: ``,
+    options: [{
+      text: 'Continue',
+      nextText: 7
+    },
+    {
+      text: `Continue`,
+      nextText: 7
+    },
+    ]
+  },
+  {
+    id: 7,
+    text: ``,
+    options: [{
+      text: 'Continue',
+      nextText: 8
+    },
+    {
+      text: `Continue`,
+      nextText: 8
+    },
+    ]
+  }
 ]
 
 startGame()
