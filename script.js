@@ -185,7 +185,13 @@ Surprisingly, there is. And that is you, the mighty knight that balances the opp
   },
   {
     id: 7,
-    text: ``,
+    text: `With your arms in hand, you felt well-prepared to meet the King....
+You enter his chamber and as you walk you heard the noise of a few soldiers
+chattering in a distance.
+
+???: "Ah.. the King has yet ordered for another prey"
+??: "Pitiful lad.. I hope he not hear the voice of angels too soon"
+???: "Bah! Serves him right! He's a knight of no welcome to any side of Destice"`,
     options: [{
       text: 'Continue',
       nextText: 8
