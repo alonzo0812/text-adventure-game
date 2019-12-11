@@ -92,7 +92,7 @@ const textNodes = [
     text: `In the main lands of Schole lies the Kingdom of Destice. A kingdom filled with horrid men reeking of carnal desires and the stench of corruption.
             Though Destice is a place that rivals hell, some still harbour goodwill in their heart. A cliche isn't it? Now one may ask, in a place where one must be good or bad, does there lie hope for an outcast to exist? A man whose only shade is gray? 
 Surprisingly, there is. And that is you, the mighty knight that balances the opposing forces that eternally clash in the everyday of Destice, the knight named Curlone.
-  And you are standing now atop the castle tower looking below at the wide scenery of madness in front of you, Destice. Knowing that the King wishes to meet you soon for a Quest, you then wore your armor and prepare the best weapon you can yield….
+  And you are standing now atop the castle tower looking below at the wide scenery of madness in front of you, Destice. Knowing that the King wishes to meet you soon for a Quest, you then wore your armor and went on to prepare the best weapon you can yield….
 `,
     options: [{
       text: 'a Sword',
