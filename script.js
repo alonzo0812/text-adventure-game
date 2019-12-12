@@ -2,6 +2,7 @@ const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
 const inventoryElement = document.getElementById('inventory')
 const healthElement = document.getElementById('health')
+const imageElement = document.getElementById('image-container')
 
 let inventory = {}//Practically your inventory
 let playerHealth = 0;
@@ -11,7 +12,7 @@ function startGame() {
   playerHealth = 100//Math.floor((Math.random()*20 + 100))
   showTextNode(1)
 }
-//////////////////////////////////////////////
+
 function typeWriter(textNode,x) {
     if (x < textNode.length){//try while?
       console.log(textNode)
@@ -20,7 +21,7 @@ function typeWriter(textNode,x) {
       setTimeout(function(){typeWriter(textNode,x);}, 60)
     }
   };
-  ////////////////////////////////////////////
+  
 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
