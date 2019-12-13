@@ -89,6 +89,20 @@ function deleteItem(prop){
   //   },
   //   ]
   // }
+//---Basic
+  // {
+  //   id: ,
+  //   text: ``,
+  //   options: [{
+  //     text: '',
+  //     nextText: ///NextNum
+  //   },
+  //   {
+  //     text: ``,
+  //     nextText: ///NextNum
+  //   },
+  //   ]
+  // }
 //-----
 
 const textNodes = [
@@ -202,7 +216,34 @@ chattering in a distance.
     },
     {
       text: `Kill the solder who disrespected you`,
-      nextText: 8
+      reduceHealth: 5,
+      nextText: 9
+    },
+    ]
+  },
+  {
+    id: 8,
+    text: ``,
+    options: [{
+      text: '',
+      nextText: 10
+    },
+    {
+      text: ``,
+      nextText: 10
+    },
+    ]
+  },
+  {
+    id: 9,
+    text: ``,
+    options: [{
+      text: '',
+      nextText: 11
+    },
+    {
+      text: ``,
+      nextText: 11
     },
     ]
   }
