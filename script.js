@@ -18,7 +18,7 @@ function typeWriter(textNode,x) {
       console.log(textNode)
       textElement.innerHTML += textNode.charAt(x);
       x++;
-      setTimeout(function(){typeWriter(textNode,x);}, 60)
+      setTimeout(function(){typeWriter(textNode,x);}, 15)
     }
   };
   
