@@ -18,7 +18,7 @@ function typeWriter(textNode,x) {
       console.log(textNode)
       textElement.innerHTML += textNode.charAt(x);
       x++;
-      setTimeout(function(){typeWriter(textNode,x);}, 15)
+      setTimeout(function(){typeWriter(textNode,x);}, 17)
     }
   };
   
@@ -58,6 +58,9 @@ function selectOption(option) {
   if (option.removeInventory){
     deleteItem(option.removeInventory)
   }
+  if(option.reduceHealth){
+    playerHealth -= option.reduceHealth;
+  }
   inventoryElement.innerText = 'Inventory: ' + JSON.stringify(inventory)
   healthElement.innerText = 'Health: ' + playerHealth
 
@@ -76,6 +79,7 @@ function deleteItem(prop){
   //     text: '',
   //     setInventory: {item: true},
   //     removeInventory: 'item',
+  //     reduceHealth: number,
   //     nextText: ///NextNum
   //   },
   //   {
@@ -94,7 +98,7 @@ const textNodes = [
     options: [
       {
         text: 'Start the Adventure!',
-        nextText: 2
+        nextText: 2,
       },
       {
         text: 'Start the Adventure!',
@@ -133,7 +137,7 @@ Surprisingly, there is. And that is you, the mighty knight that balances the opp
   },
   {
     id: 3,
-    text: ``,
+    text: `a Sword! (Your class is now set to Swordsman)`,
     options: [{
       text: 'Continue',
       nextText: 7
@@ -146,7 +150,7 @@ Surprisingly, there is. And that is you, the mighty knight that balances the opp
   },
   {
     id: 4,
-    text: ``,
+    text: `a Bow! (Your class is now set to Archer)`,
     options: [{
       text: 'Continue',
       nextText: 7
@@ -159,7 +163,7 @@ Surprisingly, there is. And that is you, the mighty knight that balances the opp
   },
   {
     id: 5,
-    text: ``,
+    text: `Twin Daggers! (Your class is now set to Assassin)`,
     options: [{
       text: 'Continue',
       nextText: 7
@@ -172,7 +176,7 @@ Surprisingly, there is. And that is you, the mighty knight that balances the opp
   },
   {
     id: 6,
-    text: ``,
+    text: `a Spear! (Your class is now set to Spearman)`,
     options: [{
       text: 'Continue',
       nextText: 7
